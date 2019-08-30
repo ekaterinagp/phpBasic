@@ -1,22 +1,10 @@
 {
-  "5d68eaeab0ca3": {
-    "price": 34456,
-    "img": "5d68eaeab01d7.jpg"
-  },
-  "5d68ec9e9e59b": {
-    "price": 3344,
-    "img": "5d68ec9e9de2f.jpg"
-  },
-  "5d68ecade690b": {
-    "price": 121212,
-    "img": "5d68ecade5f8f.jpg"
-  },
-  "5d68ecb6e14a9": {
-    "price": 11111,
-    "img": "5d68ecb6e0d27.jpg"
-  },
-  "5d68ecbd01828": {
-    "price": 22222,
-    "img": "5d68ecbd00d78.jpg"
-  }
+    "5d68ecb6e14a9": {
+        "price": 11111,
+        "img": "5d68ecb6e0d27.jpg"
+    },
+    "5d68ecbd01828": {
+        "price": 22222,
+        "img": "5d68ecbd00d78.jpg"
+    }
 }
