@@ -41,7 +41,7 @@
   $sPropertyUniqueID = uniqid();
   $jProperties->$sPropertyUniqueID = $jProperty;
   // echo json_encode($jProperties);
-  $sjProperties = json_encode($jProperties);
+  $sjProperties = json_encode($jProperties, JSON_PRETTY_PRINT);
   file_put_contents(__DIR__ . '/properties.json', $sjProperties);
 
   ?>
