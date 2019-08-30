@@ -46,6 +46,7 @@
 
   ?>
   <a href="form.php">Upload an other property</a>
+  <a href="properties.php">View properties</a>
 
 </body>
 
