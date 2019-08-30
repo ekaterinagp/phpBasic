@@ -12,6 +12,7 @@
   <form action="upload.php" method="POST" enctype="multipart/form-data">
     <!-- <input type="text" placeholder="price" name="txtPrice"> -->
     <input type="file" name="myFile">
+    <input type="text" placeholder="price" name="txtPrice">
     <button>Upload property</button>
   </form>
 </body>
