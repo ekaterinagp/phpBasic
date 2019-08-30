@@ -10,13 +10,13 @@
 <body>
 
   <div class="container">
-    <a href="upload.php">Upload new property</a>
+    <a href="form.php">Upload new property</a>
 
     <!-- <div class="property">
       <div>PRICE ${{price}}</div>
       <img src="img\{{path}}">
       <a href="delete.php?id={{id}}">Delete</a>
-
+ <a href="update.php?id={{id}}">Update</a>
     </div> -->
 
     <?php
@@ -26,12 +26,14 @@
     <div>PRICE ${{price}}</div>
     <img src="img\{{path}}">
     <a href="delete.php?id={{id}}">Delete</a>
+    <a href="update.php?id={{id}}">Update</a>
   </div>';
     foreach ($jProperties as $u => $jProperty) {
       $sCopyBluePrint = $strBluePrint;
       $sCopyBluePrint = str_replace('{{price}}', $jProperty->price, $sCopyBluePrint);
       $sCopyBluePrint = str_replace('{{path}}', $jProperty->img, $sCopyBluePrint);
       $sCopyBluePrint = str_replace('{{id}}', $u, $sCopyBluePrint);
+
       echo $sCopyBluePrint;
     }
     ?>
