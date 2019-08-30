@@ -11,22 +11,11 @@
 <body>
 
   <nav>
-    <div><a class="<?php
-                    if ($sActive == 'login') {
-                      echo 'active';
-                    }
+    <div>
+      <a <?= $sActive == 'login' ? 'class="active"' : ''; ?>href="login.php">Login</a>
+    </div>
 
-                    ?>" href="login.php">Login</a></div>
-    <div><a class="<?php
-                    if ($sActive == 'contact-us') {
-                      echo 'active';
-                    }
 
-                    ?>" href="contact-us.php">Contact us</a></div>
-    <div><a class="<?php
-                    if ($sActive == 'signup') {
-                      echo 'active';
-                    }
-                    ?>" href="signup.php">Signup</a></div>
-
+    <div><a <?= $sActive == 'contact-us' ? 'class="active"' : ''; ?> href="contact-us.php">Contact us</a></div>
+    <div><a <?= $sActive == 'signup' ? 'class="active"' : ''; ?> href="signup.php">Sign up</a></div>
   </nav>
