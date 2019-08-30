@@ -17,5 +17,5 @@
 
 
     <div><a <?= $sActive == 'contact-us' ? 'class="active"' : ''; ?> href="contact-us.php">Contact us</a></div>
-    <div><a <?= $sActive == 'signup' ? 'class="active"' : ''; ?> href="signup.php">Sign up</a></div>
+    <div><a <?= $sActive == 'signup' ? 'class="active"' : ''; ?>href="signup.php">Sign up</a></div>
   </nav>
