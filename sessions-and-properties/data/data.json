@@ -1,1 +1,34 @@
-{"agents":{"5d6cd19d75280111":{"name":"A","properties":{"P1":{"price":1},"P2":{"price":2}}},"5d6cd19d75280222":{"name":"B","properties":{"P4":{"price":11123}}}},"users":{"5d6cd2509aab3":{"name":"dfff"},"5d6cd3d90b218":{"name":"dfffddd"}}}
+{
+    "agents": {
+        "5d6cd19d75280111": {
+            "name": "A",
+            "properties": {
+                "P1": {
+                    "price": 1233
+                },
+                "P2": {
+                    "price": 1111
+                }
+            }
+        },
+        "5d6cd19d75280222": {
+            "name": "B",
+            "properties": {
+                "P4": {
+                    "price": 122223
+                },
+                "P3": {
+                    "price": 122223
+                }
+            }
+        }
+    },
+    "users": {
+        "5d6cd2509aab3": {
+            "name": "dfff"
+        },
+        "5d6cd3d90b218": {
+            "name": "dfffddd"
+        }
+    }
+}

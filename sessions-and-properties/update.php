@@ -18,10 +18,16 @@ $sPrice = $jData->agents->$sAgentID->properties->$sPropertyID->price;
 
 if ($_POST) {
   $sNewPrice = intval($_POST['txtPrice']);
-  $jData->agents->$sAgentID->properties->$sPropertyID->price = $sNewPrice;
+  foreach ($jData->agents->$sAgentID->properties as $keyProperty => $jProperty) {
+    if ($keyProperty == $sPropertyID) {
+      $jData->agents->$sAgentID->properties->$sPropertyID->price = $sNewPrice;
+    }
+  }
+
+
   $sPrice = $sNewPrice;
   echo $sNewPrice;
-  $sjData = json_encode($jData);
+  $sjData = json_encode($jData, JSON_PRETTY_PRINT);
   file_put_contents('data/data.json', $sjData);
   header('location:view-agent-properties.php');
 }
