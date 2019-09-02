@@ -16,6 +16,7 @@ foreach ($jAgentProperties as $sPropertyID => $jAgentProperty) {
 <form>
 <input name="txtPrice" value=' . $jAgentProperty->price . '></input>
 <a href="delete.php?id=' . $sPropertyID . '">DELETE</a>
+<a href="update.php?id=' . $sPropertyID . '">Update</a>
 
 
 </form>
