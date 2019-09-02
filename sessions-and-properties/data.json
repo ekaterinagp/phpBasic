@@ -1,0 +1,34 @@
+{
+    "agents": {
+        "5d6cd19d75280111": {
+            "name": "A",
+            "properties": {
+                "P1": {
+                    "price": 1
+                },
+                "P2": {
+                    "price": 2
+                }
+            }
+        },
+        "5d6cd19d75280222": {
+            "name": "B",
+            "properties": {
+                "P3": {
+                    "price": 3
+                },
+                "P4": {
+                    "price": 4
+                }
+            }
+        }
+    },
+    "users": {
+        "5d6cd2509aab3": {
+            "name": "dfff"
+        },
+        "5d6cd3d90b218": {
+            "name": "dfffddd"
+        }
+    }
+}

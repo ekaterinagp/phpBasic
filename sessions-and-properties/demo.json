@@ -1,0 +1,25 @@
+{
+  "agents": {
+    "A1": {
+      "name": "A",
+      "password": "PassA",
+      "email": "a@a.com",
+      "properties": {
+        "address": "ADD",
+        "price": 111,
+        "images": {
+          "img1": "",
+          "img2": "",
+          "img3": ""
+        }
+      }
+    }
+  },
+  "users": {
+    "U1": {
+      "name": "AA",
+      "email": "ss@s.com",
+      "password": "123h"
+    }
+  }
+}
