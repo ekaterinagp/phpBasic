@@ -6,7 +6,7 @@ session_start();
 $_SESSION['id'] = '5d6cd19d75280222';
 
 $sAgentID = $_SESSION['id'];
-$sJData = file_get_contents('data.json');
+$sJData = file_get_contents('data/data.json');
 $jData = json_decode($sJData);
 
 // echo json_encode($jData->agents->$sAgentID->properties);
