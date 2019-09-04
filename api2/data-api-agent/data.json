@@ -1,0 +1,18 @@
+{
+    "agents": {
+        "A1": {
+            "name": "A",
+            "properties": {
+                "P1": {
+                    "price": 125
+                },
+                "P2": {
+                    "price": 125
+                }
+            }
+        },
+        "A2": {
+            "name": "B"
+        }
+    }
+}

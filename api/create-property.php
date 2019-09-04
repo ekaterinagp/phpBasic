@@ -108,7 +108,7 @@ $jData->title = $_POST['txtPrice'];
 // $jData->image = $aImages;
 //other approach
 $jData->images = [];
-$jData->address = $_POST['txtAddress'];
+$jData->address = $_POST['txtAddress']; //should be an object also
 $jData->title = $_POST['txtTitle'];
 $jData->size = $_POST['txtSize'];
 $jData->price = intval($_POST['txtPrice']);
