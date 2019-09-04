@@ -23,9 +23,11 @@ if (empty($_POST['txtPrice'])) {
   sendErrorMessage('missing txtPrice', __LINE__);
 }
 
-if ($_POST['txtPrice'] < 1) {
-  sendErrorMessage('price must be bigger than 1', __LINE__);
+if (!ctype_digit($_POST['txtPrice']) ||  $_POST['txtPrice'] < 100) {
+  sendErrorMessage('price must be only digits and more than 100', __LINE__);
 }
+
+// $sPrice = intval($_POST['txtPrice']);
 
 //size
 if (empty($_POST['txtSize'])) {
@@ -47,43 +49,44 @@ if (empty($_FILES)) {
 
 //if there is more than one image:
 // get the images, save as objects with random names in the object with the key images
-$aImages = new stdClass();
-foreach ($_FILES as $sKey => $aImageFile) {    // or  for($i=0;$i<$iCountFiles;$i++){}
-  $sKey = $aImageFile['name']; //sets key to array
+// $aImages = new stdClass();
+// foreach ($_FILES as $sKey => $aImageFile) {    // or  for($i=0;$i<$iCountFiles;$i++){}
+//   $sKey = $aImageFile['name']; //sets key to array
 
-  $aImages->$sKey = $aImageFile; //puts all the data to the array with the key of name
-  // echo json_encode($aImageFile);
-}
+//   $aImages->$sKey = $aImageFile; //puts all the data to the array with the key of name
+//   // echo json_encode($aImageFile);
+// }
 
-echo json_encode($aImages); //show all images in RAM
+// echo json_encode($aImages); 
+//show all images in RAM
 
 
-$aAllowedExtensions = ['gif', 'jpg', 'jpeg', 'png'];
-foreach ($_FILES as $aImageFile) {
-  $sExtension = pathinfo($aImageFile['name'], PATHINFO_EXTENSION);
-  $sExtension = strtolower($sExtension); //convert extension to lower case
-  if (!in_array($sExtension, $aAllowedExtensions)) {
-    sendErrorMessage('the file must be an png, gif, jpg or jpeg', __LINE__);
-  }
-}
+// $aAllowedExtensions = ['gif', 'jpg', 'jpeg', 'png'];
+// foreach ($_FILES as $aImageFile) {
+//   $sExtension = pathinfo($aImageFile['name'], PATHINFO_EXTENSION);
+//   $sExtension = strtolower($sExtension); //convert extension to lower case
+//   if (!in_array($sExtension, $aAllowedExtensions)) {
+//     sendErrorMessage('the file must be an png, gif, jpg or jpeg', __LINE__);
+//   }
+// }
 
-foreach ($_FILES as $aImageFile) {
-  $sExt =  pathinfo($aImageFile['name'])['extension']; // gets the extension of a file
-  $imgProperty = $aImageFile['tmp_name'];
-  move_uploaded_file($imgProperty, __DIR__ . '/imgs/' . $aImageFile['name']);
-}
+// foreach ($_FILES as $aImageFile) {
+//   $sExt =  pathinfo($aImageFile['name'])['extension']; // gets the extension of a file
+//   $imgProperty = $aImageFile['tmp_name'];
+//   move_uploaded_file($imgProperty, __DIR__ . '/imgs/' . $aImageFile['name']);
+// }
 
 // SIZE 
 
 // constrain the size of the file
-foreach ($_FILES as $aImageFile) {
-  if ($aImageFile['size'] < 20480) { //Bytes
-    sendErrorMessage('the image file is too small', __LINE__);
-  }
-  if ($aImageFile['size'] > 5242880) {
-    sendErrorMessage('the image file is too big', __LINE__);
-  }
-}
+// foreach ($_FILES as $aImageFile) {
+//   if ($aImageFile['size'] < 20480) { //Bytes
+//     sendErrorMessage('the image file is too small', __LINE__);
+//   }
+//   if ($aImageFile['size'] > 5242880) {
+//     sendErrorMessage('the image file is too big', __LINE__);
+//   }
+// }
 
 // if ($_FILES['imgProperty']['size'] < 20480) { // bytes
 //   sendErrorMessage('The uploaded file is too small', __LINE__);
@@ -102,16 +105,35 @@ foreach ($_FILES as $aImageFile) {
 $sCreatedTime = time();
 $jData = new stdClass();
 $jData->title = $_POST['txtPrice'];
-// $jData->image = $_FILES['imgProperty']['name'];
+// $jData->image = $aImages;
+//other approach
+$jData->images = [];
 $jData->address = $_POST['txtAddress'];
 $jData->title = $_POST['txtTitle'];
 $jData->size = $_POST['txtSize'];
+$jData->price = intval($_POST['txtPrice']);
 $jData->description = $_POST['txtDescription'];
 $jData->timestamp = date('d-m-y', $sCreatedTime);
 // echo json_encode($jData);
 
-$sjData = json_encode($jData);
+//images save to array
+$iNumberOfImages = count($_FILES['theImage']['name']);
+//here validation is needed
+for ($i = 0; $i < $iNumberOfImages; $i++) {
+  $sImageName = $_FILES['theImage']['name'][$i];
+  // echo $sImageName;
+  $sImageSize = $_FILES['theImage']['size'][$i];
+  // echo $sImageSize;
+  array_push($jData->images, $sImageName);
+  echo json_encode($jData->images);
+}
+
+
+
+$sjData = json_encode($jData, JSON_PRETTY_PRINT);
 echo $sjData;
+file_put_contents('property.json', $sjData);
+
 
 
 //  **********
