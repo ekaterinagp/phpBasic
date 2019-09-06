@@ -1,5 +1,3 @@
-<html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,23 +12,6 @@
     <input data-update="email" type="text" name="" id="emailAgent" placeholder="email" class="formInput">
     <button id="addAgent" onclick="getNewAgent()">Add agent</button></form>
 
-  <!-- <section id="agents">
-    <template class="singleAgent">
-      <img src="">
-      <input data-update="name" type="text" name="" id="nameAgent">
-      <input data-update="email" type="text" name="" id="emailAgent">
-    </template>
-  </section> -->
-  <!-- <div id="A1" class="agent">
-    <img src="a.png">
-    <input data-update="name" type="text" name="" id="" value="A">
-    <input data-update="email" type="text" name="" id="" value="a@a.com">
-  </div> -->
-  <!-- <div id="A2" class="agent">
-    <img src="b.png">
-    <input data-update="name" type="text" name="" id="" value="B">
-    <input data-update="email" type="text" name="" id="" value="b@b.com">
-  </div> -->
   <div id="agents">
     <?php
     $sjAgents = file_get_contents('data.json');
