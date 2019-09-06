@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 300px;
+  height: auto;
+}
+
+input {
+  height: 45px;
+  padding-left: 10px;
+  border: none;
+}

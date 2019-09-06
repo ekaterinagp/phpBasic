@@ -1,0 +1,12 @@
+{
+  "A1": {
+    "name": "A",
+    "email": "a@a.com",
+    "image": "a.png"
+  },
+  "A2": {
+    "name": "B",
+    "email": "b@b.com",
+    "image": "b.png"
+  }
+}
