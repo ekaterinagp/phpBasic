@@ -1,0 +1,162 @@
+{
+  "marker1": {
+    "geometry": {
+      "coordinates": [12.556166, 55.705004],
+      "type": "Point"
+    },
+    "properties": {
+      "iconSize": [60, 60],
+      "message": "Foo"
+    },
+    "type": "Feature",
+    "id": "P1",
+    "address": {
+      "address": "Lygten,1",
+      "img": "1.jpg"
+    }
+  },
+  "marker2": {
+    "geometry": {
+      "coordinates": [12.525513, 55.711585],
+      "type": "Point"
+    },
+    "properties": {
+      "iconSize": [60, 60],
+      "message": "Foo"
+    },
+    "type": "Feature",
+    "id": "P2",
+    "address": {
+      "address": "Lygten,2",
+      "img": "2.jpg"
+    }
+  },
+  "marker3": {
+    "geometry": {
+      "coordinates": [12.546885, 55.710957],
+      "type": "Point"
+    },
+    "properties": {
+      "iconSize": [60, 60],
+      "message": "Foo"
+    },
+    "type": "Feature",
+    "id": "P3",
+    "address": {
+      "address": "Lygten,3",
+      "img": "3.jpg"
+    }
+  },
+  "marker4": {
+    "geometry": {
+      "coordinates": [12.538658, 55.703473],
+      "type": "Point"
+    },
+    "properties": {
+      "iconSize": [60, 60],
+      "message": "Foo"
+    },
+    "type": "Feature",
+    "id": "P4",
+    "address": {
+      "address": "Lygten,4",
+      "img": "4.jpg"
+    }
+  },
+  "marker5": {
+    "geometry": {
+      "coordinates": [12.556134, 55.703404],
+      "type": "Point"
+    },
+    "properties": {
+      "iconSize": [60, 60],
+      "message": "Foo"
+    },
+    "type": "Feature",
+    "id": "P5",
+    "address": {
+      "address": "Lygten,5",
+      "img": "5.jpg"
+    }
+  },
+  "marker6": {
+    "geometry": {
+      "coordinates": [12.512513, 55.7165585],
+      "type": "Point"
+    },
+    "properties": {
+      "iconSize": [60, 60],
+      "message": "Foo"
+    },
+    "type": "Feature",
+    "id": "P6",
+    "address": {
+      "address": "Lygten,6",
+      "img": "6.jpg"
+    }
+  },
+  "marker7": {
+    "geometry": {
+      "coordinates": [12.565166, 55.715004],
+      "type": "Point"
+    },
+    "properties": {
+      "iconSize": [60, 60],
+      "message": "Foo"
+    },
+    "type": "Feature",
+    "id": "P7",
+    "address": {
+      "address": "Lygten,7",
+      "img": "7.jpg"
+    }
+  },
+  "marker8": {
+    "geometry": {
+      "coordinates": [12.535513, 55.721585],
+      "type": "Point"
+    },
+    "properties": {
+      "iconSize": [60, 60],
+      "message": "Foo"
+    },
+    "type": "Feature",
+    "id": "P8",
+    "address": {
+      "address": "Lygten,8",
+      "img": "8.jpg"
+    }
+  },
+  "marker9": {
+    "geometry": {
+      "coordinates": [12.596166, 55.705044],
+      "type": "Point"
+    },
+    "properties": {
+      "iconSize": [60, 60],
+      "message": "Foo"
+    },
+    "type": "Feature",
+    "id": "P9",
+    "address": {
+      "address": "Lygten,9",
+      "img": "9.jpg"
+    }
+  },
+  "marker10": {
+    "geometry": {
+      "coordinates": [12.575513, 55.718585],
+      "type": "Point"
+    },
+    "properties": {
+      "iconSize": [60, 60],
+      "message": "Foo"
+    },
+    "type": "Feature",
+    "id": "P10",
+    "address": {
+      "address": "Lygten,10",
+      "img": "10.jpg"
+    }
+  }
+}

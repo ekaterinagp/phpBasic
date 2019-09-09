@@ -9,13 +9,14 @@ function getNewAgent() {
   console.log({ newAgentEmail });
 
   $.ajax({
-    url: "api-add-agent.php",
+    url: "api-create-agent.php",
     method: "POST",
     data: {
-      // id: div.id,
       name: newAgentName,
       email: newAgentEmail
     }
+    // data:$('form').serialize(); //takes all the data from the form to be passed
+    // dataType: "JSON" //fucks all up
   }).done(function(jData) {
     console.log({ jData });
     let id = jData;
