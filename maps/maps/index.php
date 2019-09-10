@@ -25,7 +25,7 @@
       $strJProperties = file_get_contents('data.json');
       $jProperties = json_decode($strJProperties);
 
-      foreach ($jProperties as $jProperty) {
+      foreach ($jProperties->properties as $jProperty) {
         // echo '<div class="property">
         // <img src="img/'.$jProperty->image.'">
         // <div>$'.$jProperty->price.'</div>

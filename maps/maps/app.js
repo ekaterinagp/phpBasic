@@ -80,37 +80,31 @@ function fetchData() {
     .then(function(response) {
       return response.json();
     })
-    .then(function(properties) {
-      console.log(JSON.stringify(properties));
-      let propertiesArray = Object.keys(properties).map(function(key) {
-        return [Number(key), properties[key]];
-      });
-      console.log({ propertiesArray });
-      fillInMarkers(propertiesArray);
+    .then(function(response) {
+      console.log({ response });
+      fillInMarkers(response.properties);
     });
 }
 
 fetchData();
 
-function fillInMarkers(propertiesArray) {
-  for (let i = 0; i < propertiesArray.length; i++) {
-    console.log(propertiesArray[i]);
+function fillInMarkers(properties) {
+  for (let i = 0; i < properties.length; i++) {
+    console.log(properties[i]);
     var el = document.createElement("div");
     el.className = "marker";
     el.style.backgroundImage = "url(marker.png)";
     el.style.width = "60px";
     el.style.height = "60px";
-    el.id = propertiesArray[i][1].id;
+    el.id = properties[i].id;
     // console.log(property);
     new mapboxgl.Marker(el)
-      .setLngLat(propertiesArray[i][1].geometry.coordinates)
+      .setLngLat(properties[i].geometry.coordinates)
       .addTo(map);
 
     el.addEventListener("click", function() {
       console.log(`Highlight property with ID ${this.id} `);
-      // if (document.querySelector(".activeP")) {
-      //   document.querySelector(".property").classList.remove("activeP");
-      // }
+
       removeActive();
       document.getElementById(this.id).classList.add("activeP");
       document.getElementById("V-" + this.id).classList.add("activeP");
